@@ -1,0 +1,10 @@
+• memset
+• bzero
+• memcpy
+• memmove
+• strlcat
+• strchr
+• strrchr
+• memchr
+• memcmp
+• strnstr
