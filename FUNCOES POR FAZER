@@ -1,10 +1,19 @@
-• memset
 • bzero
 • memcpy
 • memmove
-• strlcat
 • strchr
 • strrchr
 • memchr
-• memcmp
-• strnstr
+
+
+ESCREVER LÓGICA DO MAIN STRNSTR NO CADERNO
+ESCREVER LÓGICA DO MEMSET
+ESCREVER LÓGICA DO STRLCAT
+
+ESCREVER LÓGICA DO MEMCMP
+# You need to cast the const void * pointers to const unsigned char * because you cant directly index void pointers (they have no type/size information).
+
+# Why unsigned char?
+# Memory comparison should be done byte by byte
+# unsigned char is always 1 byte
+# Using unsigned ensures the comparison doesnt produce unexpected results with negative values (sign extension issues)

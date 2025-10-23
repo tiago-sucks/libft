@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiago <tiago@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 11:50:34 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/23 01:17:32 by tiago            ###   ########.fr       */
+/*   Created: 2025/10/23 00:33:44 by tiago             #+#    #+#             */
+/*   Updated: 2025/10/23 00:44:34 by tiago            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
+// #include <stdio.h>
 
-# include <stdlib.h>
-# include <unistd.h>
-
-size_t ft_strlen(const char *str)
-
-#endif
+void *ft_memset(void *str, int c, size_t n)
+{
+    unsigned char    *temp;
+    
+    temp = (unsigned char *) str;
+    while (n > 0)
+    {
+        *(temp++) = (unsigned char) c;
+        n--;
+    }
+    return (str);
+}
+// int main() {
+//    char str[] = "dordordor";
+//    ft_memset(str, '#', 6);
+//    printf("%s\n", str);
+//    return 0;
+// }
