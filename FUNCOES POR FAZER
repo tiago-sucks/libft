@@ -1,10 +1,6 @@
-bzero
-memmove
 strrchr
 memchr
 calloc (com malloc)
-strdup (com malloc)
-
 
 ESCREVER LÓGICA DO MAIN STRNSTR NO CADERNO
 ESCREVER LÓGICA DO STRLCAT
