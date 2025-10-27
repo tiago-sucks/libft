@@ -6,7 +6,7 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:46:59 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/23 14:41:32 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/10/27 16:56:47 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t ft_strlen(const char *str)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while(str[i])

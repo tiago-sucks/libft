@@ -6,7 +6,7 @@
 #    By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 14:39:28 by tsimao-g          #+#    #+#              #
-#    Updated: 2025/10/23 19:04:57 by tsimao-g         ###   ########.fr        #
+#    Updated: 2025/10/27 17:40:17 by tsimao-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,6 @@ SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c ft_strlen.c ft_strdup.c \
 					ft_strnstr.c ft_tolower.c ft_isascii.c
 					
 OBJS			= $(SRCS:.c=.o)
-
-# BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
-# 					ft_lstdelone.c ft_lstiter.c ft_lstlast.c \
-# 					ft_lstmap.c ft_lstnew.c ft_lstsize.c
-# BONUS_OBJS		= $(BONUS:.c=.o)
 
 CC				= cc
 RM				= rm -f
@@ -41,7 +36,4 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-# bonus:			$(OBJS) $(BONUS_OBJS)
-# 				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
-
-.PHONY:			all clean fclean re bonus
+.PHONY:			all clean fclean re
