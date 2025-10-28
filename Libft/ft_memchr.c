@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiago <tiago@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 11:50:34 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/28 17:58:28 by tiago            ###   ########.fr       */
+/*   Created: 2025/10/28 18:07:06 by tiago             #+#    #+#             */
+/*   Updated: 2025/10/28 18:08:04 by tiago            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdio.h>
-# include <stdint.h>
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	const unsigned char	*ptr;
+	unsigned char		ch;
+	size_t				i;
 
+	ptr = (const unsigned char *)s;
+	ch = (unsigned char)c;
+	i = 0;
+	while (i < n)
+	{
+		if (ptr[i] == ch)
+			return ((void *)(ptr + i));
+		i++;
+	}
+	return (NULL);
+}
 
-size_t ft_strlen(const char *str);
-
-#endif
+//ler manual e falar com claude
