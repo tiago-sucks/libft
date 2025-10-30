@@ -1,28 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiago <tiago@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 16:05:00 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/30 00:14:02 by tiago            ###   ########.fr       */
+/*   Created: 2025/10/29 23:38:00 by tiago             #+#    #+#             */
+/*   Updated: 2025/10/29 23:38:43 by tiago            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char *ft_strrchr(const char *s, int c)
-{
-	int len;
-	c = (unsigned char)c;
-
-	len = ft_strlen(s);
-	while (len >= 0)
-	{
-		if (s[len] == (char)c)
-			return ((char *)&s[len]);
-		len--;
-	}
-	return (NULL);
-}

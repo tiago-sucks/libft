@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   NOVO_ft_substr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiago <tiago@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 16:05:00 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/30 00:14:02 by tiago            ###   ########.fr       */
+/*   Created: 2025/10/30 01:26:32 by tiago             #+#    #+#             */
+/*   Updated: 2025/10/30 01:27:00 by tiago            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int len;
-	c = (unsigned char)c;
-
-	len = ft_strlen(s);
-	while (len >= 0)
-	{
-		if (s[len] == (char)c)
-			return ((char *)&s[len]);
-		len--;
-	}
-	return (NULL);
+    
 }

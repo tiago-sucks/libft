@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tiago <tiago@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:50:34 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/29 16:42:01 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/10/30 01:23:16 by tiago            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@ char *ft_strnstr(const char *s1, const char *s2, size_t n);
 char *ft_strrchr(const char *s, int c);
 int ft_tolower(int c);
 int ft_toupper(int c);
+
+char *ft_strjoin(char const *s1, char const *s2);
 
 #endif
