@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 20:47:03 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/11/03 16:47:39 by tsimao-g         ###   ########.fr       */
+/*   Created: 2025/11/03 16:56:14 by tsimao-g          #+#    #+#             */
+/*   Updated: 2025/11/03 16:57:04 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	write(fd, &c, 1);
 }
-// se eu meter 9 ? retorna c either way, porém se for legivel, retorna c modificado

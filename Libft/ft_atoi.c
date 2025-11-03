@@ -6,20 +6,20 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 20:18:46 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/27 17:38:07 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:08:42 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int i;
-	int sign;
-	int sum;
+	int	i;
+	int	sign;
+	int	sum;
 
 	i = 0;
 	sum = 0;
 	sign = 1;
-	while (str[i] >= 9 && str[i] <= 13 )
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 		i++;
 	if (str[i] == '+' )
 		i++;
@@ -33,5 +33,5 @@ int ft_atoi(const char *str)
 		sum = (sum * 10) + str[i] - '0';
 		i++;
 	}
-	return(sum * sign);
+	return (sum * sign);
 }

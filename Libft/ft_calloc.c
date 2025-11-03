@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tiago <tiago@student.42.fr>                +#+  +:+       +#+        */
+/*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:55:18 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/28 18:03:50 by tiago            ###   ########.fr       */
+/*   Updated: 2025/11/03 16:17:23 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,23 @@
 
 //nmemb - numero de elementos numa array // size - tamanho dos elementos do array
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    size_t i;
-    unsigned char *temp;
-    
-    i = 0;
-    if (nmemb == 0 || size == 0)
-        return (malloc(1)); //retorna o pointer se forem 0
-    if (size > SIZE_MAX / nmemb)
-        return (NULL); //dá erro se a multiplicação der overflow
-    temp = malloc(nmemb * size);
-    if (!temp)
-        return (NULL); //fazemos na mesma para verificar caso falhe por problemas de hardware
-    while (i < nmemb * size)
-        temp[i++] = 0;
-    return (temp);
+	size_t			i;
+	unsigned char	*temp;
+
+	i = 0;
+	if (nmemb == 0 || size == 0)
+		return (malloc(0)); //retorna o pointer se forem 0
+	if (size > SIZE_MAX / nmemb)
+		return (NULL); //dá erro se a multiplicação der overflow
+	temp = malloc(nmemb * size);
+	if (!temp)
+		return (NULL); //fazemos na mesma para verificar caso falhe por problemas de hardware
+	while (i < nmemb * size)
+		temp[i++] = 0;
+	return (temp);
 }
 
 //usar NULL num calloc sucedido, tipo calloc(0,5) dá a parecer que falhou
-//usar malloc(0) em glibc retorna um pointer válido, mas para outros pode passar como NULL
-//usar malloc(1) garante que é um pointer unico para free() porque é apenas um byte, e todos os sistemas conseguem ler da mesma forma
+//usar malloc(0) em glibc retorna um pointer válido, mas para outros pode passar como NULL, mas pronto podia ser malloc(1)

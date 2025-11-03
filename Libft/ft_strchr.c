@@ -6,15 +6,15 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 15:52:44 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/29 16:37:13 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:35:05 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])

@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tiago <tiago@student.42.fr>                +#+  +:+       +#+        */
+/*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 16:05:00 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/30 00:14:02 by tiago            ###   ########.fr       */
+/*   Updated: 2025/11/03 16:46:15 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int len;
-	c = (unsigned char)c;
+	int	len;
 
+	c = (unsigned char)c;
 	len = ft_strlen(s);
 	while (len >= 0)
 	{

@@ -6,21 +6,21 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:10:28 by tiago             #+#    #+#             */
-/*   Updated: 2025/10/23 15:29:26 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:45:26 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 	size_t	j;
-	
+
 	if (!s1 || !s2)
 		return (NULL);
 	if (s2[0] == '\0')
-		return ((char*)s1);
+		return ((char *)s1);
 	i = 0;
 	while (s1[i] && i < n)
 	{
@@ -30,7 +30,7 @@ char *ft_strnstr(const char *s1, const char *s2, size_t n)
 			j++;
 		}
 		if (!s2[j])
-			return ((char*)(s1 + i));
+			return ((char *)(s1 + i));
 		++i;
 	}
 	return (NULL);
@@ -39,18 +39,13 @@ char *ft_strnstr(const char *s1, const char *s2, size_t n)
 // int main()
 // {
 // 	char *result;
-    
 //     result = ft_strnstr("0123456789", "4", 10);
-//     printf("%s\n", result ? result : "(null)");
-    
+//     printf("%s\n", result ? result : "(null)");	
 //     result = ft_strnstr("0123456789", "4", 2);
-//     printf("%s\n", result ? result : "(null)");
-    
+//     printf("%s\n", result ? result : "(null)");	
 //     result = ft_strnstr("0123456789", "a", 10);
-//     printf("%s\n", result ? result : "(null)");
-    
+//     printf("%s\n", result ? result : "(null)");	
 //     result = ft_strnstr("0123456789", "9", 10);
-//     printf("%s\n", result ? result : "(null)");
-    
+//     printf("%s\n", result ? result : "(null)");	
 //     return 0;
 // }

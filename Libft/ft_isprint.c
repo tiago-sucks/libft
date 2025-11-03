@@ -6,11 +6,11 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:39:53 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/27 18:51:47 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:19:52 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (!(c >= 32 && c <= 126))
 		return (0);

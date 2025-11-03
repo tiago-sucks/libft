@@ -6,18 +6,18 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 18:48:50 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/27 16:57:09 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:37:51 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-	int i;
-	int len;
-	char *d;
-	
+	int		i;
+	int		len;
+	char	*d;
+
 	i = 0;
 	len = ft_strlen(s);
 	d = malloc(sizeof(char) * (len + 1));
@@ -29,5 +29,5 @@ char *ft_strdup(const char *s)
 		i++;
 	}
 	d[i] = '\0';
-	return (d);	
+	return (d);
 }

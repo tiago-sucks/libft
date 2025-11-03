@@ -6,14 +6,14 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:46:02 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/27 18:51:40 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:19:46 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
-		return(1);
+		return (1);
 	else
 		return (0);
 }

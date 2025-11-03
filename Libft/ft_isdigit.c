@@ -6,14 +6,14 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:39:22 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/27 18:51:43 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:19:49 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-		return(1);
+		return (1);
 	else
 		return (0);
 }

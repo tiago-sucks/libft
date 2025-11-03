@@ -6,11 +6,11 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 20:49:19 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/10/23 19:00:30 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:47:52 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 32;

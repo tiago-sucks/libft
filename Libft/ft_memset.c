@@ -6,26 +6,26 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 00:33:44 by tiago             #+#    #+#             */
-/*   Updated: 2025/10/23 15:29:06 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:34:41 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *str, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
-    unsigned char    *temp;
-    int i;
-    
-    i = 0;
-    temp = (unsigned char *) str;
-    while (n > 0)
-    {
-        temp[i] = (unsigned char) c;
-        n--;
-        i++;
-    }
-    return (str);
+	unsigned char	*temp;
+	int				i;
+
+	i = 0;
+	temp = (unsigned char *) str;
+	while (n > 0)
+	{
+		temp[i] = (unsigned char) c;
+		n--;
+		i++;
+	}
+	return (str);
 }
 // int main() {
 //    char str[] = "dordordor";
