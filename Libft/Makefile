@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+         #
+#    By: tiago <tiago@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 14:39:28 by tsimao-g          #+#    #+#              #
-#    Updated: 2025/11/03 17:51:36 by tsimao-g         ###   ########.fr        #
+#    Updated: 2025/11/04 16:00:09 by tiago            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ SRCS			=	ft_strlen.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 					ft_strlcpy.c ft_atoi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c \
 					ft_tolower.c ft_toupper.c ft_strjoin.c ft_calloc.c ft_strtrim.c \
 					ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c \
-					ft_strmapi.c ft_striteri.c
+					ft_strmapi.c ft_striteri.c ft_itoa.c ft_split.c ft_substr.c
+					
 OBJ_DIR			=	obj
 OBJS			=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 
