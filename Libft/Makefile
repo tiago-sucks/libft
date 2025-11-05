@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tiago <tiago@student.42.fr>                +#+  +:+       +#+         #
+#    By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 14:39:28 by tsimao-g          #+#    #+#              #
-#    Updated: 2025/11/04 16:00:09 by tiago            ###   ########.fr        #
+#    Updated: 2025/11/05 18:07:04 by tsimao-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,7 @@ OBJS			=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 
 CC				=	cc
 RM				=	rm -f
-CFLAGS			=	-Wall -Wextra -Werror -I.
-
+CFLAGS			=	-Wall -Wextra -Werror
 NAME			=	libft.a
 
 all:			$(NAME)

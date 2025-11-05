@@ -6,7 +6,7 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:55:18 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/11/03 16:17:23 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/05 17:11:12 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	i = 0;
 	if (nmemb == 0 || size == 0)
-		return (malloc(0)); //retorna o pointer se forem 0
+		return (malloc(1)); //retorna o pointer se forem 0
 	if (size > SIZE_MAX / nmemb)
 		return (NULL); //dá erro se a multiplicação der overflow
 	temp = malloc(nmemb * size);

@@ -6,7 +6,7 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 19:44:56 by tiago             #+#    #+#             */
-/*   Updated: 2025/11/03 16:25:01 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/05 17:18:11 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+
+//este da handle a overlap

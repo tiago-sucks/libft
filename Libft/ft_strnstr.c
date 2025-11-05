@@ -6,7 +6,7 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:10:28 by tiago             #+#    #+#             */
-/*   Updated: 2025/11/03 16:45:26 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:56:42 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	size_t	i;
 	size_t	j;
 
-	if (!s1 || !s2)
-		return (NULL);
 	if (s2[0] == '\0')
 		return ((char *)s1);
 	i = 0;
