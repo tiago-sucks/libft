@@ -6,7 +6,7 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 15:30:22 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/11/05 18:08:27 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/06 16:01:19 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t			i;
 	unsigned char	*ptdst;
 	unsigned char	*ptsrc;
-
+	
 	ptdst = (unsigned char *)dst;
 	ptsrc = (unsigned char *)src;
 	i = 0;

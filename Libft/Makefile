@@ -6,7 +6,7 @@
 #    By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 14:39:28 by tsimao-g          #+#    #+#              #
-#    Updated: 2025/11/05 18:07:04 by tsimao-g         ###   ########.fr        #
+#    Updated: 2025/11/06 17:33:26 by tsimao-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,16 @@ SRCS			=	ft_strlen.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 					ft_tolower.c ft_toupper.c ft_strjoin.c ft_calloc.c ft_strtrim.c \
 					ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c \
 					ft_strmapi.c ft_striteri.c ft_itoa.c ft_split.c ft_substr.c
+
+BONUS			=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
+					ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
+					ft_lstmap.c
 					
-OBJ_DIR			=	obj
+OBJ_DIR			=	mandatory
+BONUS_DIR		=	bonus
+
 OBJS			=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
+BONUS_OBJS		=	$(addprefix $(BONUS_DIR)/, $(BONUS:.c=.o))
 
 CC				=	cc
 RM				=	rm -f
@@ -31,19 +38,26 @@ all:			$(NAME)
 $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 
+bonus:			$(BONUS_OBJS)
+				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
 $(OBJ_DIR)/%.o:	%.c
-				mkdir -p $(OBJ_DIR)
+				@mkdir -p $(OBJ_DIR)
+				$(CC) $(CFLAGS) -c $< -o $@
+
+$(BONUS_DIR)/%.o:	%.c
+				@mkdir -p $(BONUS_DIR)
 				$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-				$(RM) -r $(OBJ_DIR)
+				$(RM) -r $(OBJ_DIR) $(BONUS_DIR)
 
 fclean:			clean
 				$(RM) $(NAME)
 
 re:				fclean $(NAME)
 
-.PHONY:			all clean fclean re
+.PHONY:			all bonus clean fclean re
 
 # OBJ_DIR = obj --variável para o diretorio
 # OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o)) -- adiciona o prefixo obj à frente dos .o
