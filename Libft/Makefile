@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+         #
+#    By: tiago <tiago@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 14:39:28 by tsimao-g          #+#    #+#              #
-#    Updated: 2025/11/06 17:33:26 by tsimao-g         ###   ########.fr        #
+#    Updated: 2025/11/07 03:20:08 by tiago            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,9 +58,3 @@ fclean:			clean
 re:				fclean $(NAME)
 
 .PHONY:			all bonus clean fclean re
-
-# OBJ_DIR = obj --variável para o diretorio
-# OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o)) -- adiciona o prefixo obj à frente dos .o
-# $(OBJ_DIR)/%.o:%.c  --faz qualquer obj/*.o file, procurar pelo *.c file de nome igual
-# mkdir -p $(OBJ_DIR) --cria o obj se não houver
-# $(RM) -r $(OBJ_DIR) --remove o diretorio obj

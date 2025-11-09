@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tiago <tiago@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 19:44:56 by tiago             #+#    #+#             */
-/*   Updated: 2025/11/05 17:18:11 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/07 12:56:39 by tiago            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,27 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char		*dp;
 	const char	*sp;
+	size_t		i;
 
 	dp = (char *)dst;
 	sp = (const char *)src;
 	if (sp < dp && sp + len > dp)
-		while (len--)
-			*(dp + len) = *(sp + len);
+	{
+		i = len;
+		while (i > 0)
+		{
+			i--;
+			dp[i] = sp[i];
+		}
+	}
 	else
 	{
-		while (len--)
+		i = 0;
+		while (i < len)
 		{
-			*dp = *sp;
-			sp++;
-			dp++;
+			dp[i] = sp[i];
+			i++;
 		}
 	}
 	return (dst);
 }
-
-//este da handle a overlap

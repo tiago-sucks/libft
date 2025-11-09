@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tiago <tiago@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 17:58:52 by tiago             #+#    #+#             */
-/*   Updated: 2025/11/05 17:27:51 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/07 12:57:42 by tiago            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ static int	ft_count_words(const char *s, char c)
 
 	i = 0;
 	words = 0;
-	while (s[i]) //enquanto a string for uma string
+	while (s[i])
 	{
-		if (s[i] != c) //SE a string for diferente do separador
+		if (s[i] != c)
 		{
-			words++;  //conta uma palavra
-			while (s[i] && s[i] != c) //ignora o resto das letras da letras até sair do loop e entrar novamente na condição
+			words++;
+			while (s[i] && s[i] != c)
 				i++;
 		}	
 		else
@@ -39,18 +39,18 @@ static char	*ft_get_words(const char *s, char c)
 	int		i;
 
 	i = 0;
-	while (s[i] && s[i] != c) //faz o strlen enquanto o s[i] não for a letra do separador
+	while (s[i] && s[i] != c)
 		i++;
-	word = (char *) malloc(sizeof(char) * (i + 1)); //cria a string com o i + 1 para o NULL
-	if (!word) //verifica o malloc
+	word = (char *) malloc(sizeof(char) * (i + 1));
+	if (!word)
 		return (NULL);
-	i = 0; //reinicia o "i" para usar como index
-	while (s[i] && s[i] != c) //enquanto o s[i] não for o separador...
+	i = 0;
+	while (s[i] && s[i] != c)
 	{
-		word[i] = s[i]; //...passa o s[i] para o word[i]
+		word[i] = s[i];
 		i++;
 	}
-	word[i] = '\0'; //acaba a string
+	word[i] = '\0';
 	return (word);
 }
 

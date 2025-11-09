@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiago <tiago@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 20:47:03 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/11/07 12:59:16 by tiago            ###   ########.fr       */
+/*   Created: 2025/11/09 00:43:26 by tiago             #+#    #+#             */
+/*   Updated: 2025/11/09 00:55:11 by tiago            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+// this is just t_list *, not t_list **, because we only need to read the list, not modify the head pointer
+
+int	ft_lstsize(t_list *lst)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	int	count;
+
+	count = 0;
+	while (lst)
+	{
+		count++;
+		lst = lst->next; //aponta para o próximo node, quando for ao ultimo, recebe NULL e para o loop
+	}
+	return (count);
 }
