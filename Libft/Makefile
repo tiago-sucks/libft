@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tiago <tiago@student.42.fr>                +#+  +:+       +#+         #
+#    By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 14:39:28 by tsimao-g          #+#    #+#              #
-#    Updated: 2025/11/07 03:20:08 by tiago            ###   ########.fr        #
+#    Updated: 2025/11/10 19:59:44 by tsimao-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,8 +38,11 @@ all:			$(NAME)
 $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 
-bonus:			$(BONUS_OBJS)
-				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus:			.bonus
+
+.bonus:			$(BONUS_OBJS)
+				ar rcs $(NAME) $(BONUS_OBJS)
+				@touch .bonus
 
 $(OBJ_DIR)/%.o:	%.c
 				@mkdir -p $(OBJ_DIR)
@@ -51,6 +54,7 @@ $(BONUS_DIR)/%.o:	%.c
 
 clean:
 				$(RM) -r $(OBJ_DIR) $(BONUS_DIR)
+				$(RM) .bonus
 
 fclean:			clean
 				$(RM) $(NAME)
@@ -58,3 +62,20 @@ fclean:			clean
 re:				fclean $(NAME)
 
 .PHONY:			all bonus clean fclean re
+
+# bonus is now a phony target that depends on .bonus
+# .bonus is a real file that acts as a timestamp and depends on $(BONUS_OBJS)
+# Only bonus objects are added to the archive with ar rcs $(NAME) $(BONUS_OBJS)
+# Removed .bonus from .PHONY so Make treats it as a real file target
+
+# Now:
+
+# First make bonus: Compiles bonus objects, adds them to libft.a, creates .bonus file
+# Second make bonus: Make sees .bonus exists and bonus objects haven't changed → prints "nothing to be done for 'bonus'"
+
+# The .bonus (with the dot prefix) is a convention, but you could name it anything. Here's why it's commonly used:
+# Why the dot prefix?
+
+# Hidden files: In Unix/Linux, files starting with . are hidden by default when you run ls. This keeps your project directory clean-looking since .bonus is just a timestamp marker file, not actual source code.
+# Convention: It's a common practice in Makefiles to use hidden files for tracking build states (like .PHONY targets that need persistence).
+# Avoids naming conflicts: Less likely to conflict with actual source files or other project files.
