@@ -6,7 +6,7 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 00:16:13 by tiago             #+#    #+#             */
-/*   Updated: 2025/11/03 16:39:38 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/11 17:36:31 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,50 +40,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	tab[i + j] = 0;
 	return (tab);
 }
-
-// int main(void)
-// {
-// 	char *result;
-
-// 	printf("=== Test 1: Normal strings ===\n");
-// 	result = ft_strjoin("Hello", "World");
-// 	printf("Result: '%s'\n", result);
-// 	printf("Expected: 'HelloWorld'\n\n");
-// 	free(result);
-
-// 	printf("=== Test 2: Empty first string ===\n");
-// 	result = ft_strjoin("", "World");
-// 	printf("Result: '%s'\n", result);
-// 	printf("Expected: 'World'\n\n");
-// 	free(result);
-
-// 	printf("=== Test 3: Empty second string ===\n");
-// 	result = ft_strjoin("Hello", "");
-// 	printf("Result: '%s'\n", result);
-// 	printf("Expected: 'Hello'\n\n");
-// 	free(result);
-
-// 	printf("=== Test 4: Both empty ===\n");
-// 	result = ft_strjoin("", "");
-// 	printf("Result: '%s'\n", result);
-// 	printf("Expected: ''\n\n");
-// 	free(result);
-
-// 	printf("=== Test 5: NULL pointer (first) ===\n");
-// 	result = ft_strjoin(NULL, "World");
-// 	printf("Result: %s\n", result ? result : "NULL");
-// 	printf("Expected: NULL\n\n");
-
-// 	printf("=== Test 6: NULL pointer (second) ===\n");
-// 	result = ft_strjoin("Hello", NULL);
-// 	printf("Result: %s\n", result ? result : "NULL");
-// 	printf("Expected: NULL\n\n");
-
-// 	printf("=== Test 7: With spaces ===\n");
-// 	result = ft_strjoin("Hello ", "World!");
-// 	printf("Result: '%s'\n", result);
-// 	printf("Expected: 'Hello World!'\n\n");
-// 	free(result);
-
-// 	return (0);
-// }

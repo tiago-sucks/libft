@@ -6,7 +6,7 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 14:55:54 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/11/10 15:01:05 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/11 18:18:35 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst && f) //se existirem
+	if (lst && f)
 	{
-		while (lst) //enquanto lst não for NULL
+		while (lst)
 		{
-			f(lst->content); //aplica a função no conteúdo
-			lst = lst->next; //itera o node
+			f(lst->content);
+			lst = lst->next;
 		}
 	}
 }

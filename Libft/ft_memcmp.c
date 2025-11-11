@@ -6,7 +6,7 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 00:50:14 by tiago             #+#    #+#             */
-/*   Updated: 2025/11/03 16:22:00 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/11 17:35:20 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-// int main()
-// {
-// 	int dor = ft_memcmp("teste2", "teste3", 6);
-// 	if(dor < 0)
-// 		printf("s2 é maior");
-// 	else if(dor > 0)
-// 		printf("s1 é maior");
-// 	else
-// 		printf("são iguais");
-// }

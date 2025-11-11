@@ -6,7 +6,7 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:10:28 by tiago             #+#    #+#             */
-/*   Updated: 2025/11/05 15:56:42 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/11 17:37:17 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,3 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-// 	char *result;
-//     result = ft_strnstr("0123456789", "4", 10);
-//     printf("%s\n", result ? result : "(null)");	
-//     result = ft_strnstr("0123456789", "4", 2);
-//     printf("%s\n", result ? result : "(null)");	
-//     result = ft_strnstr("0123456789", "a", 10);
-//     printf("%s\n", result ? result : "(null)");	
-//     result = ft_strnstr("0123456789", "9", 10);
-//     printf("%s\n", result ? result : "(null)");	
-//     return 0;
-// }

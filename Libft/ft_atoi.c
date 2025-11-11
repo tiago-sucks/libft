@@ -6,7 +6,7 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 20:18:46 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/11/05 17:10:30 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/11 17:32:55 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sum * sign);
 }
-
-/* int main()
-{
-	char	*str = "    \n\n+1234gsfdg";
-	printf("%d",ft_atoi(str));
-} */

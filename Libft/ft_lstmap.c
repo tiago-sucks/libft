@@ -6,7 +6,7 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 15:01:24 by tsimao-g          #+#    #+#             */
-/*   Updated: 2025/11/10 15:07:21 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/11 18:47:13 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,23 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*nlst;
 	t_list	*nnode;
+	void	*content;
 
-	if (!lst || !f) //handle a seg fault
+	if (!lst || !f)
 		return (NULL);
-	nlst = NULL; //a nlst vai ser a nova lista que vai ser retornada
-	nnode = NULL; //o nnode é o novo node que vai ser feito para aplicar a nlist
-	while (lst) //enquanto a lst não for NULL
+	nlst = NULL;
+	while (lst)
 	{
-		nnode = ft_lstnew(f(lst->content)); //vai ser criado um novo node nnode com o conteúdo sendo a aplicação da função f no content do node da lista original
-		if (!nnode) //se falhar
+		content = f(lst->content);
+		nnode = ft_lstnew(content);
+		if (!nnode)
 		{
-			ft_lstclear(&nlst, del); //limpa-se a nlist toda
-			return (NULL);//e retorna NULL
+			del(content);
+			ft_lstclear(&nlst, del);
+			return (NULL);
 		}
-		ft_lstadd_back(&nlst, nnode); //se tudo correr bem, esse node é colocado no final, porque a stack coloca sempre o node mais recente no inicio da lista nova
-		lst = lst->next; //incrementa
+		ft_lstadd_back(&nlst, nnode);
+		lst = lst->next;
 	}
-	return (nlst); //retorna a nova lista
+	return (nlst);
 }

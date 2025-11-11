@@ -6,7 +6,7 @@
 /*   By: tsimao-g <tsimao-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 00:33:44 by tiago             #+#    #+#             */
-/*   Updated: 2025/11/03 16:34:41 by tsimao-g         ###   ########.fr       */
+/*   Updated: 2025/11/11 17:35:39 by tsimao-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,3 @@ void	*ft_memset(void *str, int c, size_t n)
 	}
 	return (str);
 }
-// int main() {
-//    char str[] = "dordordor";
-//    ft_memset(str, '#', 6);
-//    printf("%s\n", str);
-//    return 0;
-// }
