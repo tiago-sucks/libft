@@ -1,2 +1,4 @@
-# libft
-42 - Milestone 0
+# Libft
+First 42 School Project - Milestone 0
+
+Results: 125/100
